@@ -1,11 +1,14 @@
 # DUCK-HUNT-GAME
 
-Gameplay:
+## Introduction
 Duck Hunt is a simple and engaging shooting game that is typically played with the NES Zapper light gun accessory. The game is set in a rural hunting environment, and the objective is to shoot down ducks as they fly across the screen. The game consists of several rounds, each with a different number of ducks to shoot.
 
-
-
-
+## Features
+- Users can SignIn/SignUp using email/password or google.
+- Make their profile.
+- Live scores.
+- User-friendly UI.
+- Different rounds easy/moderate/hard.
 
 # React + Vite
 
