@@ -1,4 +1,13 @@
+
+
+//gun sound
 document.body.addEventListener('click', () => document.getElementById('gunshot').play());
+
+//bird flapping sound
+
+
+
+
 
 let count = 0;
 let bullet = 6;
@@ -20,6 +29,31 @@ function shoot(bird) {
   document.getElementById("currentscore").innerHTML = count;
   document.getElementById("currentbullets").innerHTML = bullet;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

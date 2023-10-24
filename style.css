@@ -3,8 +3,7 @@
     padding: 0px;
 }
 body{
-    /* cursor:url(assets/cursor2.png),text;  */
-     cursor: crosshair; 
+    cursor:url(assets/cursor.png),auto;
 }
 
 
