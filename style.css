@@ -37,14 +37,14 @@ body{
 }
 
 #dog img{
-    height: 156px;
-    width: 290px;
+    height: 130px;
+    width: 238px;
   
 } 
 
 @keyframes dogmov{
  100%{
-    transform: translateY(-24vh);
+    transform: translateY(-20vh);
  }
 }
 
@@ -168,16 +168,20 @@ body{
 }
 
 @keyframes fall {
-        
+    0% {
+        transform: translateY(0);
+        animation-play-state: paused;
+      } 
     
     100% {
         transform: translateY(100vh);
+        animation-play-state: running;
     }
 }
 
 
 
-#shot{
+#bullet{
     position: absolute;
     z-index: 50;
     bottom: 5%;
@@ -188,6 +192,10 @@ body{
     border: 2px solid yellow;
     border-radius: 20px;
     text-align: center;
+    color: rgba(255, 255, 255, 0.899);
+    font-family: bangers;
+    padding-top: 30px;
+    font-size: 2rem;
 
 }
 
@@ -202,6 +210,10 @@ body{
      border: 2px solid yellow;
      border-radius: 20px;
      text-align: center;
+     color: rgba(255, 255, 255, 0.899);
+    font-family: bangers;
+    padding-top: 30px;
+    font-size: 2rem;
 } 
 
 
