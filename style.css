@@ -2,6 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    /* cursor:url(assets/cursor2.png),text;  */
+     cursor: crosshair; 
+}
+
 
 #container{
     position: relative;
@@ -23,6 +28,7 @@
     z-index: -1;
 
 }
+
 #dog{
     position: absolute;
     top: 500px;
@@ -31,10 +37,16 @@
 }
 
 #dog img{
-    height: 180px;
-    width: 300px;
+    height: 156px;
+    width: 290px;
   
 } 
+
+@keyframes dogmov{
+ 100%{
+    transform: translateY(-24vh);
+ }
+}
 
 #bg{
     position: absolute;
@@ -47,56 +59,150 @@
     width: 150px;
     height: 150px;
     position: absolute;
-    z-index: 20;
+    z-index: 5;
     bottom: 0;
+    transform: rotate(-45deg); 
+     animation: bird1 3s linear 0s 1;
+    
+   
 }
 #bird2{
     width: 200px;
     height: 200px;
     position: absolute;
-    z-index: 20;
+    z-index: 5;
     bottom: 0;
     left: 10%;
+    animation: bird2 4s linear 7s 1 ; 
+
 }
 #bird3{
     width: 200px;
     height: 200px;
     position: absolute;
-    z-index: 20;
+    z-index: 5;
     bottom: 0;
     left: 20%;
+    animation: bird3 4s linear 15s 1 ;
+
 }
 #bird4{
     width: 200px;
     height: 200px;
     position: absolute;
-    z-index: 20;
+    z-index: 5;
     bottom: 0;
     left: 70%;
+    animation: bird4 4s linear 3s 1;
 }
 #bird5{
     width: 200px;
     height: 200px;
     position: absolute;
-    z-index: 20;
+    z-index: 5;
     bottom: 0;
     left: 80%;
+    animation: bird5 4s linear 11s 1;
+
 }
 #bird6{
     width: 150px;
     height: 150px;
     position: absolute;
-    z-index: 20;
+    z-index: 5;
     bottom: 0;
     left: 90%;
+    animation: bird6 4s linear 19s 1; 
+
+}
+
+@keyframes bird1 {
+    
+    100% {
+        transform: translateY(-90vh) translateX(50vw);
+    }
+}
+
+@keyframes bird2 {
+    
+    100% {
+        transform: translateY(-90vh) translateX(114vw);
+    }
+}
+
+@keyframes bird3 {
+    
+    100% {
+        transform: translateY(-87vh) translateX(73vw);
+    }
+}
+
+@keyframes bird4 {
+    
+    50% {
+        transform: translateY(-82vh) translateX(-26vw);
+    }
+    100%{
+        transform: translateY(-49vh) translateX(-82vw);
+    }
+}
+
+@keyframes bird5 {
+    
+    50% {
+        transform: translateY(-82vh) translateX(-26vw);
+    }
+    100%{
+        transform: translateY(-49vh) translateX(-82vw);
+    }
+}
+
+@keyframes bird6 {
+    
+    50% {
+        transform: translateY(-82vh) translateX(-41vw);
+    }
+    100%{
+        transform: translateY(-62vh) translateX(-104vw);
+    }
+}
+
+@keyframes fall {
+        
+    
+    100% {
+        transform: translateY(100vh);
+    }
 }
 
 
 
+#shot{
+    position: absolute;
+    z-index: 50;
+    bottom: 5%;
+    left: 5%;
+    height: 78px;
+    width: 188px;
+    background-color: rgba(0, 0, 0, 0.489);
+    border: 2px solid yellow;
+    border-radius: 20px;
+    text-align: center;
 
+}
 
-
-
+#score{
+     position: absolute;
+     z-index: 50;
+     bottom: 5%;
+     right: 5%;
+     height: 78px;
+     width: 188px;
+     background-color: rgba(0, 0, 0, 0.489);
+     border: 2px solid yellow;
+     border-radius: 20px;
+     text-align: center;
+} 
 
 
 
