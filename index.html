@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <div id="container">
+    <div id="container"> 
             <div id="dog">
              <img src="./assets/dogimg.png" alt="">
              </div>
@@ -17,17 +17,21 @@
 
             <!-- <img id="bird1" src="bird-unscreen.gif" alt=""> -->
     
-                  <img id="bird1" src="assets/bird1.gif" alt="">
-                   <img id="bird2" src="assets/bird2.gif" alt="">
-                    <img id="bird3" src="assets/bird3.gif" alt="">
-                    <img id="bird4" src="assets/bird4.gif" alt="">
-                   <img id="bird5" src="assets/bird5.gif" alt="">
-                    <img id="bird6" src="assets/bird6.gif" alt="">
+                  <img id="bird1" onclick="shoot(this)" src="assets/bird1.gif" alt="">
+                   <img id="bird2" onclick="shoot(this)" src="assets/bird2.gif" alt="">
+                    <img id="bird3" onclick="shoot(this)"  src="assets/bird3.gif" alt="">
+                    <img id="bird4" onclick="shoot(this)" src="assets/bird4.gif" alt="">
+                   <img id="bird5" onclick="shoot(this)" src="assets/bird5.gif" alt="">
+                    <img id="bird6" onclick="shoot(this)"  src="assets/bird6.gif" alt="">
 
+             
+                    <div id="shot">SHOT</div>
+                    <div id="score">SCORE</div>       
 
+                <audio id="gunshot" src="assets/gunshot.mp3"></audio>
         
     </div>
-
+     <script src="script.js"></script>
 </body>
 </html>
 
