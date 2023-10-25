@@ -1,4 +1,4 @@
- *{
+*{
     margin: 0px;
     padding: 0px;
 }
@@ -112,6 +112,66 @@ body{
     bottom: 0;
     left: 90%;
     animation: bird6 4s linear 19s 1; 
+
+}
+#bird7{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    transform: rotate(-45deg); 
+     animation: bird1 3s linear 23s 1;
+    
+   
+}
+#bird8{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 10%;
+    animation: bird2 4s linear 30s 1 ; 
+
+}
+#bird9{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 20%;
+    animation: bird3 4s linear 38s 1 ;
+
+}
+#bird10{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 70%;
+    animation: bird4 4s linear 26s 1;
+}
+#bird11{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 80%;
+    animation: bird5 4s linear 34s 1;
+
+}
+#bird12{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 90%;
+    animation: bird6 4s linear 42s 1; 
 
 }
 
