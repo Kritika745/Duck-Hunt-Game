@@ -6,74 +6,79 @@
     <title>Document</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    
 
-    <link rel="stylesheet" href="style.css">
 
+    <style>
+        body::before{
+            content: "";
+            position: absolute;
+            background: url("assets/bg.webp") no-repeat center center/cover;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+
+        }  
+
+          body{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               overflow: hidden;
+            }
+
+       button{
+              position: absolute;
+              z-index: 5;
+              height: 83px;
+              width: 162px;
+              background-color: rgb(0 0 0 / 63%);
+              border: 2px solid yellow;
+              border-radius: 20px;
+              text-align: center;
+              color: rgba(255, 255, 255, 0.899);
+              font-family: bangers;
+              padding-top: 4px;
+              font-size: 3rem;
+               top: 40%;
+       }
+    img{
+        position: absolute;
+        height: 200px;
+        width: 243px;
+        bottom: 0%;
+        left: 0%;
+        animation: walk 10s linear 0s infinite ;
+    }
+
+    @keyframes walk{
+        100%{
+            left: 100%;
+        }
+    }
+
+    </style>
 </head>
 <body>
-    <div id="container"> 
-            <div id="dog">
-             <img src="./assets/dogimg.png" alt="">
-             </div>
-            
-            <img id="bg" src="assets/bg3.jpg" alt=""> 
-
-            <!-- <img id="bird1" src="bird-unscreen.gif" alt=""> -->
-    
-                  <img id="bird1" class="bird" onclick="shoot(this)" src="assets/bird1.gif" alt="">
-                   <img id="bird2" class="bird" onclick="shoot(this)" src="assets/bird2.gif" alt="">
-                    <img id="bird3" class="bird" onclick="shoot(this)"  src="assets/bird3.gif" alt="">
-                    <img id="bird4" class="bird" onclick="shoot(this)" src="assets/bird4.gif" alt="">
-                   <img id="bird5" class="bird" onclick="shoot(this)" src="assets/bird5.gif" alt="">
-                    <img id="bird6"  class="bird" onclick="shoot(this)" src="assets/bird6.gif" alt="">
+        <button id="play" type="submit">PLAY</button>
+        <audio id="start" src="assets/start.mp3" ></audio>
+        <img src="assets/dog-walk1.gif" alt="">
 
 
-                    <div id="bullet">BULLETS: <span id="currentbullets">6</span></div>       
-                    <div id="score">SCORE: <span id="currentscore">0</span></div>       
+        <script>
+            document.getElementById("play").addEventListener("click", function() {
+                var audio = document.getElementById("start");
+                audio.play();
+                
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 3000); 
+            });
+        </script>
 
-                <audio id="gunshot" src="assets/gunshot.mp3" preload="auto"></audio>
-                <audio id="duck-flapping" src="assets/duck-flapping.mp3" preload="auto"></audio>
-                <audio id="duck-caught" src="assets/duck-caught.mp3" preload="auto"></audio>
-        
-    </div>
-     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
