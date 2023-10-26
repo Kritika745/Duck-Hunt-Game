@@ -45,7 +45,7 @@ body{
 
 @keyframes dogmov{
  100%{
-    transform: translateY(-20vh);
+    transform: translateY(-40vh);
  }
 }
 
