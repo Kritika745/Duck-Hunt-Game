@@ -1,5 +1,5 @@
 let count = 0;
-let bullet = 12;
+let bullet = 20;
 
 document.body.addEventListener('click', () => {
    document.getElementById('gunshot').play();
