@@ -19,7 +19,9 @@ body{
 #container::before{
     content: "";
     position: absolute;
-    background: url("assets/bg.webp") no-repeat center center/cover;
+    background: url("assets/bg.webp") no-repeat center;
+    
+    background-size: 100% 100vh;
     top: 0px;
     left: 0px;
     height: 100%;
@@ -51,7 +53,8 @@ body{
     position: absolute;
     z-index: 10;
     width: 100vw;
-    top: 483px;
+    height: 36vh;
+    top: 64vh;
 }
 
 #bird1{
@@ -258,6 +261,7 @@ body{
 
 }
 
+
 #score{
      position: absolute;
      z-index: 50;
@@ -276,4 +280,11 @@ body{
 } 
 
 
+@media only  screen and (max-width : 769px ){
+     #score, #bullet {
+        height: 40px;
+        width: 94px;
+        font-size: 1rem ;
+     }
+}
 

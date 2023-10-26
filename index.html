@@ -72,11 +72,13 @@
         <script>
             document.getElementById("play").addEventListener("click", function() {
                 var audio = document.getElementById("start");
-                audio.play();
                 
                 setTimeout(function() {
                     window.location.href = "main.html";
                 }, 3000); 
+               
+                audio.play();
+         
             });
         </script>
 
