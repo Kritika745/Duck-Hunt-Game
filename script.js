@@ -1,7 +1,6 @@
 let count = 0;
 let bullet = 12;
 
-
 //bullet sound and bullet count
 document.body.addEventListener('click', () => {
 
@@ -34,8 +33,8 @@ function shoot(bird) {
   document.getElementById('duck-caught').play();
 
   count += 500;
-
   document.getElementById("currentscore").innerHTML = count;
+
 }
 
 //bird flying sound
@@ -63,3 +62,4 @@ function playBirdSoundWithDelay() {
 birdElements.forEach((birdElement) => {
   birdElement.addEventListener("animationstart", playBirdSoundWithDelay);
 });
+
