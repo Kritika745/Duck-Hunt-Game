@@ -1,19 +1,26 @@
 let count = 0;
-let bullet = 20;
+let bullet = 12;
 
 //bullet sound and bullet count
 document.body.addEventListener('click', () => {
-   document.getElementById('gunshot').play();
 
   let bullet = parseInt(document.getElementById("currentbullets").innerHTML);
 
   if (bullet > 0) {
     bullet -= 1;
+    document.getElementById('gunshot').play();
     document.getElementById("currentbullets").innerHTML = bullet;
+  } 
+  else if (bullet === 0 && count < 6000) {
+    document.getElementById("box").innerHTML = "YOU LOST!!";
+  }
+  else if (count === 6000) {
+    document.getElementById("box").innerHTML = "YOU WON!!";
   }
 });
 
 
+//shooting bird
 function shoot(bird) {
   
   bird.style.animation = 'fall 2s linear 0s 1 forwards';
@@ -26,13 +33,11 @@ function shoot(bird) {
   document.getElementById('duck-caught').play();
 
   count += 500;
- 
-
   document.getElementById("currentscore").innerHTML = count;
- 
+
 }
 
-// Create an array of bird elements
+//bird flying sound
 const birdElements = [
   document.getElementById("bird1"),
   document.getElementById("bird2"),
@@ -48,48 +53,13 @@ const birdElements = [
   document.getElementById("bird12"),
 ];
 
-function playBirdSoundWithDelay(){
+function playBirdSoundWithDelay() {
   setTimeout(() => {
     document.getElementById("duck-flapping").play();
-
-  }, 1000);
+  }, 1000); 
 }
-// Add animationstart event listener to each bird element
+
 birdElements.forEach((birdElement) => {
-  birdElement.addEventListener("animationstart",playBirdSoundWithDelay);
+  birdElement.addEventListener("animationstart", playBirdSoundWithDelay);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
