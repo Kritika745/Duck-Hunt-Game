@@ -29,7 +29,7 @@ body{
 
 }
 #box{  position: absolute;
-        top: 30%;
+        top: 20%;
         left: 42%;
         text-align: center;
         color:red;
@@ -37,6 +37,24 @@ body{
         font-size: 5rem;
         z-index: 100;
         
+
+}
+
+#try-again{ 
+    position: absolute;
+    z-index: 100;
+    top: 33%;
+    left: 45%;
+    height: 60px;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.489);
+    border: 2px solid yellow;
+    border-radius: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.899);
+    font-family: bangers;
+    padding-top: 5px;
+    font-size: 2rem;
 
 }
 
