@@ -63,3 +63,4 @@ birdElements.forEach((birdElement) => {
   birdElement.addEventListener("animationstart", playBirdSoundWithDelay);
 });
 
+
