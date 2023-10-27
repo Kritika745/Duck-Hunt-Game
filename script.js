@@ -1,18 +1,27 @@
 let count = 0;
-let bullet = 20;
+let bullet = 12;
 
+
+//bullet sound and bullet count
 document.body.addEventListener('click', () => {
-   document.getElementById('gunshot').play();
 
   let bullet = parseInt(document.getElementById("currentbullets").innerHTML);
 
   if (bullet > 0) {
     bullet -= 1;
+    document.getElementById('gunshot').play();
     document.getElementById("currentbullets").innerHTML = bullet;
+  } 
+  else if (bullet === 0 && count < 6000) {
+    document.getElementById("box").innerHTML = "YOU LOST!!";
+  }
+  else if (count === 6000) {
+    document.getElementById("box").innerHTML = "YOU WON!!";
   }
 });
 
 
+//shooting bird
 function shoot(bird) {
   
   bird.style.animation = 'fall 2s linear 0s 1 forwards';
@@ -25,13 +34,11 @@ function shoot(bird) {
   document.getElementById('duck-caught').play();
 
   count += 500;
-  bullet -= 1;
 
   document.getElementById("currentscore").innerHTML = count;
-  document.getElementById("currentbullets").innerHTML = bullet;
 }
 
-// Create an array of bird elements
+//bird flying sound
 const birdElements = [
   document.getElementById("bird1"),
   document.getElementById("bird2"),
@@ -47,89 +54,12 @@ const birdElements = [
   document.getElementById("bird12"),
 ];
 
-// Function to play the bird sound
-function playBirdSound() {
-  document.getElementById("duck-flapping").play();
+function playBirdSoundWithDelay() {
+  setTimeout(() => {
+    document.getElementById("duck-flapping").play();
+  }, 1000); 
 }
 
-// Add animationstart event listener to each bird element
 birdElements.forEach((birdElement) => {
-  birdElement.addEventListener("animationstart", playBirdSound);
+  birdElement.addEventListener("animationstart", playBirdSoundWithDelay);
 });
-
-
-// Initialize the bird sound and a flag to track if it's playing
-const birdSound = document.getElementById("duck-flapping");
-let birdSoundPlaying = false;
-
-// Function to play the bird sound
-function playBirdSound() {
-  birdSound.play();
-  birdSoundPlaying = true;
-}
-
-// Function to stop the bird sound
-function stopBirdSound() {
-  birdSound.pause();
-  birdSound.currentTime = 0;
-  birdSoundPlaying = false;
-}
-
-// Add animationstart event listener to each bird element
-birdElements.forEach((birdElement) => {
-  birdElement.addEventListener("animationstart", playBirdSound);
-});
-
-// When the audio ends, restart it
-birdSound.addEventListener("ended", () => {
-  if (birdSoundPlaying) {
-    birdSound.currentTime = 0; // Reset the audio to the beginning
-    birdSound.play(); // Play it again
-  }
-});
-
-// Click event listener to decrement bullets
-document.body.addEventListener('click', () => {
-  let bullet = parseInt(document.getElementById("currentbullets").innerHTML);
-
-  if (bullet > 0) {
-    document.getElementById('gunshot').play();
-    bullet -= 1;
-    document.getElementById("currentscore").innerHTML = count;
-    document.getElementById("currentbullets").innerHTML = bullet;
-  } else {
-    // When bullets are zero, stop the bird sound
-    stopBirdSound();
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

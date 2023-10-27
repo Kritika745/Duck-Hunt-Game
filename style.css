@@ -19,12 +19,23 @@ body{
 #container::before{
     content: "";
     position: absolute;
-    background: url("assets/bg.webp") no-repeat center center/cover;
+    background: url("assets/bg.webp") no-repeat center center/cover;  
     top: 0px;
     left: 0px;
     height: 100%;
     width: 100%;
     z-index: -1;
+
+}
+#box{  position: absolute;
+        top: 30%;
+        left: 42%;
+        text-align: center;
+        color:red;
+        font-family: bangers;
+        font-size: 5rem;
+        z-index: 100;
+        
 
 }
 
@@ -47,11 +58,13 @@ body{
  }
 }
 
+
 #bg{
     position: absolute;
     z-index: 10;
     width: 100vw;
-    top: 483px;
+    top: 483px; 
+    
 }
 
 #bird1{
@@ -270,9 +283,9 @@ body{
      border-radius: 20px;
      text-align: center;
      color: rgba(255, 255, 255, 0.899);
-    font-family: bangers;
-    padding-top: 30px;
-    font-size: 2rem;
+     font-family: bangers;
+     padding-top: 30px;
+     font-size: 2rem;
 } 
 
 
