@@ -1,24 +1,23 @@
 let count = 0;
 let bullet = 12;
+let gameEnded = false;
 
 //bullet sound and bullet count
-document.body.addEventListener('click', () => {
+document.body.addEventListener("click", () => {
+  if (gameEnded) return;
 
   let bullet = parseInt(document.getElementById("currentbullets").innerHTML);
 
   if (bullet > 0) {
     bullet -= 1;
-    document.getElementById('gunshot').play();
+    document.getElementById("gunshot").play();
     document.getElementById("currentbullets").innerHTML = bullet;
-  } 
-  else if (bullet === 0 && count < 6000) {
-    document.getElementById("box").innerHTML = "YOU LOST!!";
-  }
-  else if (count === 6000) {
-    document.getElementById("box").innerHTML = "YOU WON!!";
+  } else if (bullet === 0 && count < 6000) {
+    gameOver(false);
+  } else if (count === 6000) {
+    gameOver(true);
   }
 });
-
 
 //shooting bird
 function shoot(bird) {
@@ -33,10 +32,8 @@ function shoot(bird) {
   document.getElementById('duck-caught').play();
 
   count += 500;
- 
 
   document.getElementById("currentscore").innerHTML = count;
- 
 }
 
 //bird flying sound
@@ -55,48 +52,41 @@ const birdElements = [
   document.getElementById("bird12"),
 ];
 
-function playBirdSoundWithDelay(){
+function playBirdSoundWithDelay() {
   setTimeout(() => {
     document.getElementById("duck-flapping").play();
-
-  }, 1000);
+  }, 1000); 
 }
-// Add animationstart event listener to each bird element
+
 birdElements.forEach((birdElement) => {
-  birdElement.addEventListener("animationstart",playBirdSoundWithDelay);
+  birdElement.addEventListener("animationstart", playBirdSoundWithDelay);
 });
 
+const tryAgainButton = document.getElementById("try-again");
 
 
+function gameOver(isWin) {
+  if (gameEnded) return; 
 
+  gameEnded = true;
 
+  document.getElementById("gunshot").pause();
+  document.getElementById("duck-caught").pause();
+  document.getElementById("duck-flapping").pause();
 
+  birdElements.forEach((birdElement) => {
+    birdElement.style.animation = "none";
+  });
 
+  if (isWin) {
+    document.getElementById("box").innerHTML = "YOU WON!!";
+  } else {
+    document.getElementById("box").innerHTML = "YOU LOST!!";
+  }
 
+  tryAgainButton.style.display = "block";
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+tryAgainButton.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
