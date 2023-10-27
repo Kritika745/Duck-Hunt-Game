@@ -32,8 +32,8 @@ function shoot(bird) {
   document.getElementById('duck-caught').play();
 
   count += 500;
-
   document.getElementById("currentscore").innerHTML = count;
+
 }
 
 //bird flying sound
