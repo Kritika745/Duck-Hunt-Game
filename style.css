@@ -65,8 +65,8 @@ body{
 
 #dog{
     position: absolute;
-    top: 500px;
-    left: 40%;
+    top: 64vh;
+    left: 40vw;
     z-index: 1;
 }
 
@@ -78,7 +78,7 @@ body{
 
 @keyframes dogmov{
  100%{
-    transform: translateY(-20vh);
+    transform: translateY(-16vh);
  }
 }
 
@@ -329,5 +329,82 @@ body{
         font-size: 1.5rem;
         width: 148px;
     }
+    #dog{
+        left: 35vw;
+    }
+    #dog img{
+        width: 181px;
+    }
 }
 
+@media only  screen and (max-height : 420px ){
+    #bird1{
+        width: 100px;
+        height: 100px;
+    }
+    #bird2{
+        width: 150px;
+        height: 150px;
+    }
+    #bird3{
+        width: 150px;
+        height: 150px;
+        bottom: -35px;
+    }
+    #bird4{
+        width: 150px;
+        height: 150px;
+    }
+    #bird5{
+        width: 150px;
+        height: 150px;
+        bottom: -35px;
+
+
+    }
+    #bird6{
+        width: 100px;
+        height: 100px;
+    }
+    #bird7{
+        width: 100px;
+        height: 100px;
+    }
+    #bird8{
+        width: 150px;
+        height: 150px;
+    }
+    #bird9{
+        width: 150px;
+        height: 150px;
+        bottom: -35px;
+
+    }
+    #bird10{
+        width: 150px;
+        height: 150px;
+    }
+    #bird11{
+        width: 150px;
+        height: 150px;
+        bottom: -35px;
+
+    }
+    #bird12{
+        width: 100px;
+        height: 100px;
+    }
+    #bullet{
+        height: 45px;
+        width: 155px;
+        font-size: 1.5rem;
+        padding-top: 19px;
+    }
+    #score{
+        height: 45px;
+    width: 155px;
+    font-size: 1.5rem;
+    padding-top: 19px;
+
+    }
+}
