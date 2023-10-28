@@ -4,6 +4,7 @@
 }
 body{
     cursor:url(assets/cursor.png),auto;
+    display: flex;
 }
 
 
@@ -28,9 +29,15 @@ body{
     z-index: -1;
 
 }
-#box{  position: absolute;
-        top: 20%;
-        left: 42%;
+#wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+}
+
+#box{  
         text-align: center;
         color:red;
         font-family: bangers;
@@ -41,10 +48,7 @@ body{
 }
 
 #try-again{ 
-    position: absolute;
     z-index: 100;
-    top: 33%;
-    left: 45%;
     height: 60px;
     width: 180px;
     background-color: rgba(0, 0, 0, 0.489);
@@ -55,6 +59,7 @@ body{
     font-family: bangers;
     padding-top: 5px;
     font-size: 2rem;
+    margin-top: 15px;
 
 }
 
@@ -82,8 +87,9 @@ body{
     position: absolute;
     z-index: 10;
     width: 100vw;
-    top: 464px; 
- 
+    /* top: 464px;  */
+   top: 64vh;
+   height: 36vh;
 }
 
 #bird1{
@@ -277,7 +283,7 @@ body{
     z-index: 50;
     bottom: 5%;
     left: 5%;
-    height: 78px;
+    height: 70px;
     width: 188px;
     background-color: rgba(0, 0, 0, 0.489);
     border: 2px solid yellow;
@@ -296,7 +302,7 @@ body{
      z-index: 50;
      bottom: 5%;
      right: 5%;
-     height: 78px;
+     height: 70px;
      width: 188px;
      background-color: rgba(0, 0, 0, 0.489);
      border: 2px solid yellow;
@@ -309,11 +315,19 @@ body{
 } 
 
 
-@media only  screen and (max-width : 769px ){
+@media only  screen and (max-width : 820px ){
      #score, #bullet {
-        height: 40px;
-        width: 94px;
-        font-size: 1rem ;
-     }
+        height: 43px;
+        width: 139px;
+        font-size: 1.5rem;
+        padding-top: 19px;
+    }
+    #box{
+        font-size: 4rem;
+    }
+    #try-again{
+        font-size: 1.5rem;
+        width: 148px;
+    }
 }
 
