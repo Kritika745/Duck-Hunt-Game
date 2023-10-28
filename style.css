@@ -38,11 +38,11 @@ body{
 }
 
 #box{  
-        text-align: center;
-        color:red;
-        font-family: bangers;
-        font-size: 5rem;
-        z-index: 100;
+    text-align: center;
+    color:red;
+    font-family: bangers;
+    font-size: 5rem;
+    z-index: 100;
         
 
 }
@@ -81,6 +81,7 @@ body{
     transform: translateY(-16vh);
  }
 }
+
 
 
 #bg{
@@ -345,6 +346,7 @@ body{
     #bird2{
         width: 150px;
         height: 150px;
+        bottom: -35px;
     }
     #bird3{
         width: 150px;
@@ -354,13 +356,12 @@ body{
     #bird4{
         width: 150px;
         height: 150px;
+        bottom: -35px;
     }
     #bird5{
         width: 150px;
         height: 150px;
         bottom: -35px;
-
-
     }
     #bird6{
         width: 100px;
@@ -373,6 +374,7 @@ body{
     #bird8{
         width: 150px;
         height: 150px;
+        bottom: -35px;
     }
     #bird9{
         width: 150px;
@@ -383,6 +385,7 @@ body{
     #bird10{
         width: 150px;
         height: 150px;
+        bottom: -35px;
     }
     #bird11{
         width: 150px;
@@ -394,17 +397,28 @@ body{
         width: 100px;
         height: 100px;
     }
+
     #bullet{
         height: 45px;
         width: 155px;
         font-size: 1.5rem;
         padding-top: 19px;
     }
-    #score{
-        height: 45px;
-    width: 155px;
-    font-size: 1.5rem;
-    padding-top: 19px;
 
+    #score{
+       height: 45px;
+       width: 155px;
+       font-size: 1.5rem;
+       padding-top: 19px;
+
+    }
+    #dog{
+        left: 40vw;
+        animation: 0.5s linear 0s 2 alternate none running dogmove;
+    }
+    
+    #dog img{
+        width: 160px;
+        height: 84px;
     }
 }

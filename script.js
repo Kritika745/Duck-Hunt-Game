@@ -91,22 +91,3 @@ tryAgainButton.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
-function switchToLandscapeMode() {
-  if (window.matchMedia("(max-width: 769px) and (orientation: portrait)").matches) {
-    // Check if the screen width is less than 769px and is in portrait mode.
-    // Attempt to force landscape mode.
-    if (window.screen.orientation && window.screen.orientation.lock) {
-      window.screen.orientation.lock("landscape").then(() => {
-        console.log("Switched to landscape mode");
-      }).catch((error) => {
-        console.error("Failed to switch to landscape mode:", error);
-      });
-    } else if (window.screen.lockOrientation) {
-      // Alternative method (may not be supported by all browsers).
-      window.screen.lockOrientation("landscape");
-    }
-  }
-}
-
-// Call the function when the page loads.
-window.addEventListener("load", switchToLandscapeMode);
