@@ -14,6 +14,21 @@
 
 </head>
 <body>
+     <script>
+        // Check the device's orientation
+        function checkOrientation() {
+            if (window.innerHeight > window.innerWidth) {
+                // Device is in portrait mode, prompt user to rotate
+                alert("Please rotate your device to landscape mode for the best experience.");
+            }
+        }
+
+        // Call the checkOrientation function when the page loads
+        checkOrientation();
+
+        // Listen for orientation changes and recheck
+        window.addEventListener("orientationchange", checkOrientation);
+    </script>
     <div id="container"> 
             <div id="dog">
              <img src="./assets/dogimg.png" alt="">
