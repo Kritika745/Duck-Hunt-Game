@@ -1,0 +1,279 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    cursor:url(../assets/cursor.png),auto;
+}
+
+
+#container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+#container::before{
+    content: "";
+    position: absolute;
+    background: url("../assets/bg.webp") no-repeat center center/cover;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+}
+
+#dog{
+    position: absolute;
+    top: 500px;
+    left: 40%;
+    z-index: 1;
+}
+
+#dog img{
+    height: 130px;
+    width: 238px;
+  
+} 
+
+@keyframes dogmov{
+ 100%{
+    transform: translateY(-20vh);
+ }
+}
+
+#bg{
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    top: 410px;
+}
+
+#bird1{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    transform: rotate(-45deg); 
+     animation: bird1 3s linear 0s 1;
+    
+   
+}
+#bird2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 10%;
+    animation: bird2 4s linear 7s 1 ; 
+
+}
+#bird3{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 20%;
+    animation: bird3 4s linear 15s 1 ;
+
+}
+#bird4{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 70%;
+    animation: bird4 4s linear 3s 1;
+}
+#bird5{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 80%;
+    animation: bird5 4s linear 11s 1;
+
+}
+#bird6{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 90%;
+    animation: bird6 4s linear 19s 1; 
+
+}
+#bird7{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    transform: rotate(-45deg); 
+     animation: bird1 3s linear 23s 1;
+    
+   
+}
+#bird8{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 10%;
+    animation: bird2 4s linear 30s 1 ; 
+
+}
+#bird9{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 20%;
+    animation: bird3 4s linear 38s 1 ;
+
+}
+#bird10{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 70%;
+    animation: bird4 4s linear 26s 1;
+}
+#bird11{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 80%;
+    animation: bird5 4s linear 34s 1;
+
+}
+#bird12{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 90%;
+    animation: bird6 4s linear 42s 1; 
+
+}
+
+@keyframes bird1 {
+    
+    100% {
+        transform: translateY(-90vh) translateX(50vw);
+    }
+}
+
+@keyframes bird2 {
+    
+    100% {
+        transform: translateY(-90vh) translateX(114vw);
+    }
+}
+
+@keyframes bird3 {
+    
+    100% {
+        transform: translateY(-87vh) translateX(73vw);
+    }
+}
+
+@keyframes bird4 {
+    
+    50% {
+        transform: translateY(-82vh) translateX(-26vw);
+    }
+    100%{
+        transform: translateY(-49vh) translateX(-82vw);
+    }
+}
+
+@keyframes bird5 {
+    
+    50% {
+        transform: translateY(-82vh) translateX(-26vw);
+    }
+    100%{
+        transform: translateY(-49vh) translateX(-82vw);
+    }
+}
+
+@keyframes bird6 {
+    
+    50% {
+        transform: translateY(-82vh) translateX(-41vw);
+    }
+    100%{
+        transform: translateY(-62vh) translateX(-104vw);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        animation-play-state: paused;
+      } 
+    
+    100% {
+        transform: translateY(100vh);
+        animation-play-state: running;
+    }
+}
+
+
+
+#bullet{
+    position: absolute;
+    z-index: 50;
+    bottom: 5%;
+    left: 5%;
+    height: 78px;
+    width: 188px;
+    background-color: rgba(0, 0, 0, 0.489);
+    border: 2px solid yellow;
+    border-radius: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.899);
+    font-family: bangers;
+    padding-top: 30px;
+    font-size: 2rem;
+
+}
+
+#score{
+     position: absolute;
+     z-index: 50;
+     bottom: 5%;
+     right: 5%;
+     height: 78px;
+     width: 188px;
+     background-color: rgba(0, 0, 0, 0.489);
+     border: 2px solid yellow;
+     border-radius: 20px;
+     text-align: center;
+     color: rgba(255, 255, 255, 0.899);
+    font-family: bangers;
+    padding-top: 30px;
+    font-size: 2rem;
+} 
+
+
+
