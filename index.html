@@ -93,6 +93,16 @@
                     window.location.href = "main.html";
                 }, 3000); 
     });
+
+            function checkOrientation() {
+            if (window.innerHeight > window.innerWidth) {
+                alert("Please rotate your device to landscape mode for the best experience.");
+            }
+        }
+
+        checkOrientation();
+
+        window.addEventListener("orientationchange", checkOrientation);
         </script>
 
 </body>
